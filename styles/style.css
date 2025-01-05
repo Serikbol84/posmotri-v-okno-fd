@@ -87,3 +87,35 @@ ol {
 .title {
   margin-bottom: 26px;
 }
+
+/* ======================================================== Step 2 ================================================== */
+.result__video-container {
+  width: 711px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content__list {
+  display: grid;
+  gap: 20px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
