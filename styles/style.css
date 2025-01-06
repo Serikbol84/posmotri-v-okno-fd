@@ -58,7 +58,6 @@ ol {
 .content {
   display: grid;
   grid-template-areas: "result details";
-  /* grid-template-columns: 711px 399px; */
   max-width: 1140px;
   align-items: end;
   gap: 30px;
@@ -69,15 +68,16 @@ ol {
   grid-area: result; 
 }
 
-/* .result__video-container {
+.result__video-container {
   width: 711px;
+  height: 399px;
   margin-bottom: 16px;
-} */
+}
 
-/* .result__video {
+.result__video {
   width: 100%;
   object-fit: cover;
-} */
+}
 
 .search-form {
   display: flex;
@@ -162,8 +162,8 @@ ol {
 }
 
 .content__list {
-  /* display: grid;
-  gap: 20px; */
+  display: grid;
+  gap: 30px;
 }
 
 /* ======================================================== templates 1 ================================================== */
@@ -199,12 +199,12 @@ ol {
 }
 
 .content__video-card {
-  /* display: flex;
-  align-items: flex-start; */
+  display: flex;
+  align-items: flex-start; 
 }
 
 .content__video-card-description-container {
-  /* flex-grow: 1; */
+  flex-grow: 1;
 }
 
 .content__video-card-title {
@@ -226,10 +226,10 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  /* width: 194px;
-  height: 103px;
+  /* max-width: 194px; */
+  max-height: 103px;
   object-fit: cover;
-  object-position: center; */
+  object-position: center;
 }
 
 .more-button-template {
