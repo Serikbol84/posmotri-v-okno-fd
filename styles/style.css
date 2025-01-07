@@ -97,11 +97,73 @@ ol {
   margin-bottom: 5px;
 }
 
+.search-form__textfield {
+  padding: 0;
+  appearance: none;
+  width: 225px;
+  height: 27px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: #fff;
+  background-color: transparent;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 1);
+  outline-offset: 1px;
+}
+
 .search-form__label {
   display: flex;
   align-items: center;
   width: fit-content;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
   height: 27px;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox:after  {
+  opacity: 1;
+}
+
+.search-form__label-text {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .visually-hidden {
@@ -114,77 +176,42 @@ ol {
   white-space: nowrap;
 }
 
-.search-form__textfield {
-  appearance: none;
-  width: 225px;
-  height: 27px;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 0.8em;
-  color: #fff;
-  background-color: transparent;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 1);
-  outline: none;
-}
-
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid rgba(255, 255, 255, 1);
-  outline-offset: 1px;
-}
-
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-}
-
-.search-form__pseudo-checkbox {
-  position: relative;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
-  margin-right: 5px;
-  box-sizing: border-box;
-  line-height: 0;
-}
-
-.search-form__pseudo-checkbox::after {
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  width: 15px;
-  height: 15px;
-  background-color: #fff;
-  opacity: 0;
-}
-
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  opacity: 1;
-}
-
-.search-form__label-text {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.search-form__label:hover {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
 .button {
+  display: inline-block;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2em;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
 
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.button:active {
+  background: rgba(84, 80, 80, 1);
+}
+
+.button:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 1);
+  outline-offset: 2px;
 }
 
 .search-form__submit-button {
+  margin-top: auto;
+  padding: 5.5px 73px;
+}
 
+.more-button {
+  width: 100%;
+  padding: 5.5px 0;
+  margin: 30px 0 2px;
 }
 
 /* ======================================================== section content details ================================================== */
@@ -217,24 +244,7 @@ ol {
   gap: 30px;
 }
 
-/* ======================================================== templates 1 ================================================== */
-.preloader-template {
-
-}
-
-.preloader {
-
-}
-
-.preloader-chasing-squares {
-
-}
-
-.square {
-
-}
-
-/* ======================================================== templates 2 ================================================== */
+/* ======================================================== cards-list-item-templates ================================================== */
 .cards-list-item-template {
 
 }
@@ -288,15 +298,25 @@ ol {
   object-position: center;
 }
 
-.more-button-template {
+/* ======================================================== preloader-templates ================================================== */
+.preloader-template {
 
 }
 
-.more-button {
+.preloader {
 
 }
 
-/* ======================================================== templates 3 ================================================== */
+.preloader-chasing-squares {
+
+}
+
+.square {
+
+}
+
+
+/* ======================================================== error-templates ================================================== */
 .error-template {
 
 }
