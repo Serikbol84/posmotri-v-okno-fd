@@ -169,7 +169,7 @@ ol {
 }
 
 
-.search-form__label .search-form__label-text:hover { /*добавил нижнее подчеркивание с помощью обертки*/
+.search-form__label:hover .search-form__label-text { /*добавил нижнее подчеркивание с помощью обертки. Вчера видать не совсем понял*/
   text-decoration: underline;
 }
 
@@ -245,6 +245,7 @@ ol {
   overflow-y: auto;
   margin-top: 26px;
   position: relative;
+  padding: 0 3px;
 }
 
 .content__list {
@@ -253,11 +254,6 @@ ol {
 }
 
 /* ======================================================== cards-list-item-templates ================================================== */
-.content__list-item {
-  padding: 0 3px;
-}
-
-
 .content__card-link {
   display: block;
   text-decoration: none;
@@ -275,7 +271,7 @@ ol {
 
 .content__card-link:hover {   /*убрал лищние элементы*/
   text-decoration: underline;
-  text-underline-offset: 4px;
+  /* text-underline-offset: 1px; */
 }
 
 .content__card-link:focus {
@@ -299,7 +295,7 @@ ol {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.13em;
   text-transform: uppercase;
   max-width: 195px;
   text-overflow: ellipsis;
@@ -320,7 +316,8 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  max-height: 103px;
+  width: 194px; /*задал фиксированные широту и высоту. По ТЗ не понятно должны ли меняться размеры картинок динамически. а так мог бы поиграться с aspect-ratio*/
+  height: 103px;
   object-fit: cover;
   object-position: center;
 }
